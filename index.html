@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>School Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr id = "home" style="margin-bottom: -100px;">
+    <h1 style="text-align:center; font-size: 140px;"><marquee scrollamount = 20>SCHOOL WEBSITE</marquee></h1>
+    <hr style="margin-top: -125px;">
+    <br>
+    <div id = "navdiv">
+        <a href="#home"><button>TO TOP</button></a>
+        <a href="#about"><button>ABOUT</button></a>
+        <a href="#events"><button>EVENTS</button></a>
+        <a href="#contact"><button>CONTACT US</button></a>
+    </div>
+    <br>
+    <fieldset id="about">
+        <legend style="font-size: 50px;">About</legend>
+        <p>
+            OFFICIAL SCHOOL WEBSITE
+            <br><br>
+            Qucikly go to the sections by clicking the navigation buttons.
+        </p>
+    </fieldset>
+    <fieldset id="events">
+        <legend style="font-size: 50px;">Events</legend>
+        <div id = "event-tables">
+        <table>
+            <caption>Upcoming Events</caption>
+            <tr>
+                <th>Event name</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <table>
+            <caption>On-going Events</caption>
+            <tr>
+                <th>Event name</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <table>
+            <caption>Recent Events</caption>
+            <tr>
+                <th>Event name</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        </div>
+    </fieldset>
+    <fieldset id="contact">
+        <legend style="font-size: 50px;">Contact Us</legend>
+        <p>
+            Phone No.(s): +XX XXXXX-XXXXX, +YY YYYYY-YYYYY
+            <br><br>
+            Principal's mail-address: email1@email.com
+            <br><br>
+            Vice-principal's mail-address: email2@email.com
+            <br><br>
+            Transport department's mail-address: email3@emal.com
+        </p>
+    </fieldset>
+    
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navdiv = document.getElementById("navdiv");
+        var sticky = navdiv.offsetTop;
+        
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+    navdiv.classList.add("stuck")
+  } else {
+    navdiv.classList.remove("stuck");
+  }
+        }
+    </script>
+
+</body>
+</html>
