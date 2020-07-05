@@ -8,14 +8,17 @@
     <h1 style="text-align:center; font-size: 140px;"><marquee scrollamount = 20>SCHOOL WEBSITE</marquee></h1>
     <hr style="margin-top: -125px;">
     <br>
+    <span id="about"></span>
     <div id = "navdiv">
         <a href="#home"><button>TO TOP</button></a>
         <a href="#about"><button>ABOUT</button></a>
         <a href="#events"><button>EVENTS</button></a>
         <a href="#contact"><button>CONTACT US</button></a>
     </div>
-    <br>
-    <fieldset id="about">
+    <div id = "spacing">
+        <br>
+    </div>
+    <fieldset>
         <legend style="font-size: 50px;">About</legend>
         <p>
             OFFICIAL SCHOOL WEBSITE
@@ -78,14 +81,17 @@
         window.onscroll = function() {myFunction()};
         
         var navdiv = document.getElementById("navdiv");
-        var sticky = navdiv.offsetTop;
+        var space = document.getElementById("spacing");
+        var bar = navdiv.offsetTop;
         
         function myFunction() {
-        if (window.pageYOffset >= sticky) {
-    navdiv.classList.add("stuck")
-  } else {
-    navdiv.classList.remove("stuck");
-  }
+            if (window.pageYOffset >= bar) {
+                navdiv.classList.add("stuck");
+                space.classList.add("more");
+            } else {
+                navdiv.classList.remove("stuck");
+                space.classList.remove("more");
+            }
         }
     </script>
 
